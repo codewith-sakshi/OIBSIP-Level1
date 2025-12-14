@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Todkar | Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+        /* ======================================= */
+        /* == RESUME PAGE SPECIFIC STYLING == */
+        /* ======================================= */
+        
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) 5%;
+            background-color: var(--color-card-bg); /* Uses the Dark Blue card background */
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        /* Ensures the header in resume.html looks professional */
+        .resume-header {
+            text-align: center;
+            padding-bottom: var(--spacing-md);
+            /* Uses the Teal accent line */
+            border-bottom: 3px solid var(--color-accent); 
+            margin-bottom: var(--spacing-md);
+        }
+        .resume-header h1 {
+            color: var(--color-accent);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        .resume-contact-info {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+        .resume-contact-info a {
+            color: var(--color-text-primary);
+        }
+
+        /* Section Headings */
+        .resume-section h3 {
+            color: var(--color-text-primary);
+            font-size: 1.5rem;
+            /* Uses the Teal accent for the left border */
+            border-left: 5px solid var(--color-accent); 
+            padding-left: 10px;
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Skill List Styling */
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .skill-list li {
+            background-color: var(--color-header-bg); /* Darkest background for tags */
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-text-secondary);
+        }
+
+        /* Project Items */
+        .project-item {
+            margin-bottom: var(--spacing-sm);
+            padding-left: 15px;
+            border-left: 2px solid var(--color-text-secondary);
+            margin-top: 15px;
+        }
+        .project-item h4 {
+            color: var(--color-text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+        }
+        .project-item p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Call to Action for Download */
+        .download-cta {
+            text-align: center; 
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-header-bg);
+        }
+        .download-cta p {
+            color: var(--color-accent);
+            margin-bottom: 15px;
+        }
+
+        /* Ensures the general button styles look right */
+        .btn-primary {
+            display: inline-block !important;
+        }
+        
+        /* Mobile adjustments for resume content */
+        @media (max-width: 768px) {
+            .resume-container {
+                margin: 20px 5%;
+                padding: var(--spacing-md) 5%;
+            }
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><a href="index.html">S. T.</a></div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="path/to/your/sakshi_todkar_resume.pdf" class="btn-resume" download>Download PDF</a></li> 
+            </ul>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <div class="resume-container">
+        
+        <div class="resume-header">
+            <h1>SAKSHI SANTOSH TODKAR</h1>
+            <div class="resume-contact-info">
+                <span><a href="mailto:sakshitodkar7@gmail.com">sakshitodkar7@gmail.com</a> | 8767781035 | </span>
+                <span><a href="www.linkedin.com/in/sakshi-todkar-8859592a3" target="_blank">LinkedIn</a> | </span>
+                <span><a href="[Your GitHub URL]" target="_blank">GitHub</a></span>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h3>Professional Summary</h3>
+            <p>A passionate and results-driven Web Developer dedicated to crafting engaging and user-friendly digital experiences. Specializing in responsive front-end development (HTML, CSS, JavaScript) with foundational knowledge in back-end technologies (Basic PHP & MySQL).</p>
+        </div>
+
+        <div class="resume-section">
+            <h3>Technical Skills</h3>
+            <ul class="skill-list">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript & DOM Manipulation</li>
+                <li>Responsive Web Design</li>
+                <li>Bootstrap & CSS Animations</li>
+                <li>Git & GitHub</li>
+                <li>Basic PHP & MySQL</li>
+            </ul>
+        </div>
+
+        <div class="resume-section">
+            <h3>Featured Projects</h3>
+            
+            <div class="project-item">
+                <h4>WILD Trails India</h4>
+                <p>A dynamic website focused on promoting travel and adventure tourism in India, featuring interactive maps and image galleries. (Technologies: HTML5, CSS3, Responsive Design)</p>
+            </div>
+            
+            <div class="project-item">
+                <h4>VibeBeats Music Player Website</h4>
+                <p>A clean, interactive web-based music player showcasing proficiency in JavaScript for advanced DOM manipulation and media control. (Technologies: HTML5, JavaScript, CSS Animations)</p>
+            </div>
+        </div>
+        
+        <div class="download-cta">
+            <p>For a complete, printable version of my qualifications:</p>
+            <a href="path/to/your/sakshi_todkar_resume.pdf" class="btn-primary" download>Download Full Resume (PDF)</a>
+        </div>
+
+    </div>
+
+    <footer id="contact" class="section-padding">
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>Ready to collaborate on an exciting project? Let's connect!</p>
+            <p class="contact-detail">Email: <a href="mailto:sakshitodkar7@gmail.com">sakshitodkar7@gmail.com</a></p>
+        </div>
+        <div class="social-links">
+            <a href="www.linkedin.com/in/sakshi-todkar-8859592a3" target="_blank">LinkedIn</a>
+            <a href="[Your GitHub URL]" target="_blank">GitHub</a>
+        </div>
+        <p class="copyright">© 2025 Sakshi Todkar. Crafted with HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>

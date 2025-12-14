@@ -1,0 +1,674 @@
+/* ===========================
+    LeafAura - style.css (Enhanced)
+    Author: Sakshi Todkar
+    =========================== */
+
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* Added smoother font rendering for a professional look */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Color Palette Refinement */
+  --green-900: #0a351d; /* Darker, richer primary color */
+  --green-700: #1b8a53; /* Vibrant primary action color */
+  --green-500: #4caf50; /* Mid-tone for accents */
+  --green-200: #e8f5e9; /* Lighter background/hover */
+  --muted: #546e7a; /* Professional gray-blue for secondary text */
+  --card: #ffffff;
+  --bg-light: #f9fdfa; /* Very light, subtle background */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius-lg: 14px;
+}
+
+/* BODY */
+body {
+  background: var(--bg-light);
+  color: var(--green-900);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* UTILITIES */
+.muted {
+    color: var(--muted);
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96); /* Slightly more opaque */
+  backdrop-filter: blur(8px); /* Increased blur */
+  transition: transform 0.4s ease, box-shadow 0.3s ease; /* Smoother transition */
+  box-shadow: var(--shadow-sm); /* Modernized shadow */
+}
+
+.header-hide {
+  transform: translateY(-100%);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 25px; /* Slightly more vertical padding */
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--green-700); /* Highlighted logo color */
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px; /* Increased gap */
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--green-900);
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease; /* Added transition for hover effect */
+}
+
+.nav a:hover,
+.nav a:focus {
+  background: var(--green-200);
+  color: var(--green-700);
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.mobile-toggle {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 26px; /* Larger icon */
+  cursor: pointer;
+  color: var(--green-900);
+}
+
+/* ================= HERO ================= */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 140px 25px 80px; /* More padding top for fixed header */
+  display: flex;
+  gap: 48px; /* Increased gap */
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1.1; /* Give left side slightly more space */
+}
+
+.eyebrow {
+  color: var(--green-500); /* Brighter accent color */
+  font-weight: 700;
+  letter-spacing: 2px; /* Increased letter spacing */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.hero-left h1 {
+  font-size: 52px; /* Larger heading */
+  margin-bottom: 20px;
+  color: var(--green-900);
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 30px;
+  max-width: 600px;
+  font-size: 18px; /* Larger lead text */
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* BUTTONS - Professional Styling */
+.btn-primary {
+  background: var(--green-700);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px; /* Slightly larger radius */
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(27, 138, 83, 0.3); /* Green shadow */
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #156d40; /* Darker on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(27, 138, 83, 0.4);
+}
+
+.btn-ghost {
+  border: 2px solid var(--green-700); /* Border matching primary color */
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--green-700);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+    background: var(--green-200);
+    color: var(--green-900);
+}
+
+.mini-features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mini {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: var(--card);
+  padding: 12px 18px; /* Increased padding */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--green-500); /* Feature highlight */
+  transition: transform 0.3s ease;
+}
+
+.mini:hover {
+    transform: translateY(-4px);
+}
+
+.mini img {
+  width: 36px; /* Slightly larger icons */
+}
+
+.mini span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* HERO RIGHT */
+.hero-right {
+  flex: 1; /* Equal space distribution for a cleaner look */
+}
+
+.hero-card {
+  position: relative;
+  border-radius: 20px; /* More prominent radius */
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--card);
+  padding: 15px; /* Added internal padding to lift the image */
+}
+
+.hero-card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.floating-leaf {
+  position: absolute;
+  top: -20px; /* Moved up */
+  right: -20px; /* Moved right */
+  width: 160px; /* Larger */
+  height: 160px;
+  background: rgba(27, 138, 83, 0.2); /* Adjusted color to match new primary */
+  border-radius: 50%;
+  filter: blur(40px); /* More blur */
+  animation: float 8s infinite ease-in-out; /* Slower animation */
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-15px) translateX(10px);
+  }
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 70px 25px; /* Increased padding for better spacing */
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 36px; /* Larger title */
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--green-500);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 30px; /* Increased gap */
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* PRODUCTS (Best Sellers) */
+.product {
+  background: var(--card);
+  padding: 20px; /* Increased padding */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 250px; /* Slightly taller images */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.price {
+  color: var(--green-700);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.sm {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* INFO CARDS (Benefits & Contact Info) */
+.benefits {
+    background-color: var(--green-200); /* Subtle background for this section */
+}
+
+.info-card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border-bottom: 4px solid var(--green-700); /* Added a touch of color */
+}
+
+/* Info card hover removed for Contact section to allow form interaction */
+.benefits .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h4 {
+    color: var(--green-700);
+    margin-bottom: 8px;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* TYPES */
+.type-card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.type-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transform: scale(1.03);
+}
+
+.type-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.type-card figcaption h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+/* OFFER (Call to Action) */
+.offer {
+  background: linear-gradient(100deg, #1b8a53 0%, #156d40 100%); /* Deeper, richer gradient */
+  color: #fff;
+  border-radius: 18px; /* Larger radius */
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 40px 30px; /* Increased padding */
+}
+
+.offer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-left h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.offer-left p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.offer-right {
+    flex-shrink: 0;
+}
+
+.btn-cta {
+    background: #ffffff;
+    color: var(--green-700);
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+
+/* PRODUCT DETAIL */
+.product-detail .grid {
+    align-items: center;
+}
+
+.product-media {
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.product-detail img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.product-info h2 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.product-meta {
+  list-style: none;
+  margin-top: 20px;
+  color: var(--muted);
+  padding-left: 0;
+}
+
+.product-meta li {
+    margin-bottom: 8px;
+}
+
+.price-row {
+    margin-top: 20px;
+}
+
+.price-large {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--green-700);
+}
+
+/* CONTACT SECTION STYLES */
+.section #contact .info-card {
+    padding: 30px;
+    /* Removed the border-bottom line for the contact form side */
+    border-bottom: none;
+}
+
+.section #contact .info-card:first-child {
+    border-bottom: 4px solid var(--green-700); 
+}
+
+.section #contact .info-card h3 {
+    font-size: 24px;
+    color: var(--green-700);
+    margin-bottom: 15px;
+}
+
+/* CONTACT FORM STYLES */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: var(--green-900);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--green-700);
+    box-shadow: 0 0 0 3px rgba(27, 138, 83, 0.15); /* Light green glow on focus */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    margin-top: 25px;
+    align-self: flex-start; /* Keeps the button attached to the left */
+    width: auto; /* Allow the button to size based on content */
+}
+
+
+/* FOOTER */
+.footer {
+  background: #e8f5e9; /* Lighter, cleaner footer background */
+  padding: 60px 25px;
+}
+
+.footer-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer h4 {
+    color: var(--green-900);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer h4::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--green-500);
+    margin-top: 5px;
+}
+
+.footer p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer p:hover {
+    color: var(--green-700);
+}
+
+.copyright {
+  text-align: center;
+  padding: 18px;
+  background: var(--green-900); /* Darker, more grounded copyright bar */
+  color: #fff;
+  font-size: 14px;
+}
+
+.copyright strong {
+    color: var(--green-500);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-left {
+      flex: none;
+  }
+
+  .hero-left h1 {
+      font-size: 40px;
+  }
+
+  .hero-right {
+    max-width: 100%;
+  }
+
+  .hero-actions, .mini-features {
+      justify-content: center;
+  }
+
+  .section-title {
+      font-size: 32px;
+  }
+
+  .offer-inner {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .offer-left {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+
+  .nav.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjusted for new header height */
+    right: 20px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .grid-3,
+  .grid-2,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+      padding: 10px;
+  }
+
+  .product-info {
+      text-align: center;
+  }
+  
+  .contact-form .btn-primary {
+      align-self: stretch; /* Make button full width on mobile */
+  }
+}

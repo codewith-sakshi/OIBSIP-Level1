@@ -1,0 +1,171 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2c3e50;
+}
+
+.split-container {
+    display: flex;
+    max-width: 1200px;
+    height: 90vh;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image-panel {
+    width: 40%;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-panel h1 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.image-panel p {
+    font-size: 1.1em;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+/* Updated .converter-box width for 40/60 split */
+.converter-box {
+    width: 60%; 
+    background-color: #ecf0f1;
+    padding: 40px;
+    box-shadow: none;
+    overflow-y: auto;
+}
+
+.converter-box h1 {
+    color: #34495e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.converter-box p {
+    color: #7f8c8d;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.input-group, .unit-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+#temperatureInput {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 17px;
+    transition: border-color 0.3s;
+}
+
+#temperatureInput:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+/* Hides actual radio buttons visually */
+.radio-buttons input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+}
+
+/* Styles the labels like buttons */
+.radio-buttons label {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: normal;
+    color: #34495e;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* Styles for checked radio button labels */
+.radio-buttons input[type="radio"]:checked + label {
+    background-color: #2ecc71;
+    color: white;
+    border-color: #2ecc71;
+    box-shadow: 0 2px 5px rgba(46, 204, 113, 0.4);
+}
+
+#convertButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    box-shadow: 0 4px #2980b9; /* Creates a 3D effect */
+}
+
+#convertButton:hover {
+    background-color: #2980b9;
+}
+
+#convertButton:active {
+    transform: translateY(4px); /* Pushes button down */
+    box-shadow: 0 0 #2980b9; /* Removes shadow */
+}
+
+.result-box {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #bdc3c7;
+}
+
+.result-box h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.result-line {
+    padding: 8px 10px;
+    font-size: 1.2em;
+    background-color: #fcfcfc;
+    border-left: 5px solid #2ecc71;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #2c3e50;
+    font-weight: 500;
+}
